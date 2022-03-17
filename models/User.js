@@ -4,6 +4,7 @@ const { Schema, Types, model } = require('mongoose');
 const thoughtSchema = require('./Thought');
 import { isEmail } from 'validator';
 
+// FRIEND SCHEMA HERE
 
 const userSchema = new Schema(
     {
@@ -19,9 +20,12 @@ const userSchema = new Schema(
             required: true,
             validate: [ isEmail, 'Please provide a valid email.' ],
         },
-        thoughts: {
-            thoughts: [thoughtSchema]
-        },
+        thoughts: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Thought',
+            }
+        ],
         // Is below right?
         friends: [
             {
@@ -43,6 +47,8 @@ userSchema.virtual('friendCount').get(function () {
 });
 
 const User = model('user', userSchema);
+
+const handleError = (err) => console.error(err);
 
 module.exports = User;
 
