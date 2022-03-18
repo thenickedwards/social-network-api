@@ -23,15 +23,16 @@ API Routes
         c. POST a new user
         d. PUT to update a user by its _id
         e. DELETE to remove user by its _id
-        BONUS f1: /api/users/:userId/friends/:friendId
-            f2: POST to add a new friend to a user's friend list
-            f3: DELETE to remove a friend from a user's friend list
+        BONUS f: Remove a user's associated thoughts when deleted.
+    1b. /api/users/:userId/friends/:friendId
+        g: POST to add a new friend to a user's friend list
+        h: DELETE to remove a friend from a user's friend list
     2. /api/thoughts
-        g. GET to get all thoughts
-        h. GET to get a single thought by its _id
-        i. POST to create a new thought (don't forget to push the created thought's _id to the associated user's thoughts array field)
-        j. PUT to update a thought by its _id
-        k. DELETE to remove a thought by its _id
-        j1: /api/thoughts/:thoughtId/reactions
-            j2: POST to create a reaction stored in a single thought's reactions array field
-            j3: DELETE to pull and remove a reaction by the reaction's reactionId value
+        i. GET to get all thoughts
+        j. GET to get a single thought by its _id
+        k. POST to create a new thought (don't forget to push the created thought's _id to the associated user's thoughts array field)
+        l. PUT to update a thought by its _id
+        m. DELETE to remove a thought by its _id
+    2b: /api/thoughts/:thoughtId/reactions
+        n: POST to create a reaction stored in a single thought's reactions array field
+        o: DELETE to pull and remove a reaction by the reaction's reactionId value
