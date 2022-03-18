@@ -81,7 +81,7 @@ const Thought = model('thought', thoughtSchema);
 
 const handleError = (err) => console.error(err);
 
-module.exports = thoughtSchema;
+module.exports = Thought;
 
 // X thoughtText
 // String

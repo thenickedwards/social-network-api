@@ -1,7 +1,7 @@
 const { Schema, Types, model } = require('mongoose');
 // Use on 18.2.16?
 //  more 18.3.26, 18.3.24
-const thoughtSchema = require('./Thought');
+
 // import isEmail from 'validator/lib/isEmail';
 // import { isEmail } from 'validator';
 var validator = require('validator');
