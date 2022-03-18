@@ -1,7 +1,8 @@
 {
-  "name": "28-Stu_Mini-Project",
+  "name": "Nick's Social Network API",
   "version": "1.0.1",
-  "description": "Mongoose back-end project - Develop",
+  "description": "Homework 18 NoSQL: Social Network API",
+  "author": "Nick Edwards",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -12,7 +13,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.0.13"
+    "mongoose": "^6.0.13",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.9"

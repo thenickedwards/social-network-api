@@ -2,7 +2,6 @@ const { Schema, Types, model } = require('mongoose');
 // reaction field's subdocument schema in the Thought model
 // Use on 18.2.18?
 // Use book as reaction and library as thought???
-const userSchema = require('./User');
 
 // reactionSchema SCHEMA HERE
 const reactionSchema = new Schema(
@@ -21,13 +20,6 @@ const reactionSchema = new Schema(
         type: Date,
         default: Date.now,
       },
-      username: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'User',
-        }
-      ],
-      reactions: [reactionSchema],
     },
 );
 

@@ -1,5 +1,5 @@
 const { Types } = require('mongoose');
-const { User, Thought } = require('../models');
+const { User } = require('../models');
 
 // Pulling from Mini Proj - courseController
 
@@ -13,7 +13,7 @@ module.exports = {
     },
 // b. GET a single user by its _id and populated thought and friend data
     getSingleUser(req, res) {
-        User.findOne({ _id: req.params.courseId })
+        User.findOne({ _id: req.params.userId })
         .select('-__v')
         .then((user) =>
             !user
@@ -56,7 +56,7 @@ module.exports = {
         .then(() => res.json({ message: 'User and thoughts deleted!' }))
         .catch((err) => res.status(500).json(err));
     },
-// BONUS f: Remove a user's associated thoughts when deleted.
+// TODO: BONUS f: Remove a user's associated thoughts when deleted.
 
 
 

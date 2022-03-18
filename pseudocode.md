@@ -36,3 +36,7 @@ API Routes
     2b: /api/thoughts/:thoughtId/reactions
         n: POST to create a reaction stored in a single thought's reactions array field
         o: DELETE to pull and remove a reaction by the reaction's reactionId value
+
+
+### Special Thanks
+https://github.com/validatorjs/validator.js

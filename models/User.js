@@ -2,7 +2,9 @@ const { Schema, Types, model } = require('mongoose');
 // Use on 18.2.16?
 //  more 18.3.26, 18.3.24
 const thoughtSchema = require('./Thought');
-import { isEmail } from 'validator';
+// import isEmail from 'validator/lib/isEmail';
+// import { isEmail } from 'validator';
+var validator = require('validator');
 
 // FRIEND SCHEMA HERE
 
@@ -18,7 +20,7 @@ const userSchema = new Schema(
             type: String,
             unique: true,
             required: true,
-            validate: [ isEmail, 'Please provide a valid email.' ],
+            validate: [ validator.isEmail, 'Please provide a valid email.' ],
         },
         thoughts: [
             {
