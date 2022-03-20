@@ -13,11 +13,7 @@ All code for Game Notes written per acceptance criteria in [/assets/provided/W18
 URL for GitHub repo: https://github.com/thenickedwards/social-network-api
 
 ## Demo Video
-Included is a demo video demonstrates where to find the GitHub repository, how to start the application/server, and each route demonstarted to diplay functionality.
-
-
-
-If you encounter any difficulty with the screencastify video above, there are mp4 and webm video files in the repo or you can use this link to the video in my Google Drive: [https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view](https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view)
+Included is a demo video demonstrates where to find the GitHub repository, how to start the application/server, and each route demonstarted to diplay functionality. There are [mp4](/assets/social-network-api_demo-video.mp4) and [webm](/assets/social-network-api_demo-video.webm) video files in the assets folder or you can use this link to the video in my Google Drive: [https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view](https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view)
 
 
 
