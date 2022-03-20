@@ -1,7 +1,7 @@
 # social-network-api
 Homework 18 NoSQL: Social Network API
 
-All code for Game Notes written per acceptance criteria in [/assets/provided/W18-hw_README.md](/assets/provided/W18-hw_README.md).
+All code for Social Network API written per acceptance criteria in [/assets/provided/W18-hw_README.md](/assets/provided/W18-hw_README.md).
 
 ## Work Done
 * When a user enters the command (npm start) to invoke the application, the server is started and the Mongoose models are synced to the MongoDB database
@@ -13,9 +13,9 @@ All code for Game Notes written per acceptance criteria in [/assets/provided/W18
 URL for GitHub repo: https://github.com/thenickedwards/social-network-api
 
 ## Demo Video
-Included is a demo video demonstrates where to find the GitHub repository, how to start the application/server, and each route demonstarted to diplay functionality. There are [mp4](/assets/social-network-api_demo-video.mp4) and [webm](/assets/social-network-api_demo-video.webm) video files in the assets folder or you can use this link to the video in my Google Drive: [https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view](https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view)
+Included is a video (embedded below) that demonstrates where to find the GitHub repository, how to start the application/server, and each route demonstarted to diplay functionality. There are also [mp4](/assets/social-network-api_demo-video.mp4) and [webm](/assets/social-network-api_demo-video.webm) video files in the assets folder or you can use this link to the video in my Google Drive: [https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view](https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view)
 
-
+[![Demo Video]](https://youtu.be/COfcDtF0_X8)
 
 Thank you for reading the readme!
 
