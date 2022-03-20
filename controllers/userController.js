@@ -1,5 +1,5 @@
 const { Types } = require('mongoose');
-const { User } = require('../models');
+const { User, Thought } = require('../models');
 
 // Pulling from Mini Proj - courseController
 
@@ -58,12 +58,13 @@ module.exports = {
           });
     },
 // e. DELETE to remove user by its _id
+// BONUS f: Remove a user's associated thoughts when deleted.
     deleteUser(req, res) {
         User.findOneAndDelete({ _id: req.params.userId })
         .then((user) =>
             !user
             ? res.status(404).json({ message: 'No user with that ID' })
-            : Student.deleteMany({ _id: { $in: user.thoughts } })
+            : Thought.deleteMany({ _id: { $in: user.thoughts } })
         )
         .then(() => res.json({ message: 'User and thoughts deleted!' }))
         .catch((err) => {
@@ -71,13 +72,42 @@ module.exports = {
             res.status(500).json(err);
           });
     },
-// TODO: BONUS f: Remove a user's associated thoughts when deleted.
-
-
 
 // 1b. /api/users/:userId/friends/:friendId
-
 // g: POST to add a new friend to a user's friend list
-
+// TAG = FRIEND     APPLICATION = USER
+    addFriend(req, res) {
+        User.findOneAndUpdate(
+        { _id: req.params.userId },
+        { $addToSet: { friends: req.params.friendId } },
+        { runValidators: true, new: true }
+        )
+        .then((user) =>
+            !user
+            ? res.status(404).json({ message: 'No user with this id!' })
+            : res.json(user)
+        )
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+          });
+    },
 // h: DELETE to remove a friend from a user's friend list
+    removeFriend(req, res) {
+        User.findOneAndUpdate(
+        { _id: req.params.userId },
+        { $pull: { friends: req.params.friendId } },
+        { runValidators: true, new: true }
+        )
+        .then((user) =>
+            !user
+            ? res.status(404).json({ message: 'No user with this id!' })
+            : res.json(user)
+        )
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+          });
+    },
+
 };

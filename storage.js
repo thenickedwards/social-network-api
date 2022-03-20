@@ -37,3 +37,28 @@ const peeps =
 		"friendCount": 0
 	}
 ]
+
+// k. POST to create a new thought (don't forget to push the created thought's _id to the associated user's thoughts array field)
+    // createThought(req, res) {
+    //     Thought.create(req.body)
+    //     .then((thought) => res.json(thought))
+    //     .catch((err) => {
+    //         console.log(err);
+    //         return res.status(500).json(err);
+    //     });
+    // },
+
+// e. DELETE to remove user by its _id
+// deleteUser(req, res) {
+// 	User.findOneAndDelete({ _id: req.params.userId })
+// 	.then((user) =>
+// 		!user
+// 		? res.status(404).json({ message: 'No user with that ID' })
+// 		: User.deleteMany({ _id: { $in: user.thoughts } })
+// 	)
+// 	.then(() => res.json({ message: 'User and thoughts deleted!' }))
+// 	.catch((err) => {
+// 		console.log(err);
+// 		res.status(500).json(err);
+// 	  });
+// },

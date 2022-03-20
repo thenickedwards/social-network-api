@@ -57,13 +57,10 @@ const thoughtSchema = new Schema(
       type: Date,
       default: Date.now,
     },
-    username: [
-      {
-          type: Schema.Types.ObjectId,
-          ref: 'user',
-          // field: 'username'
-      }
-    ],
+    username: {
+      type: String,
+      required: true,
+    },
     reactions: [reactionSchema],
   },
   {
