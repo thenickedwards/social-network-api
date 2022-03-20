@@ -1,9 +1,6 @@
 const { Schema, Types, model } = require('mongoose');
-// reaction field's subdocument schema in the Thought model
-// Use on 18.2.18?
-// Use book as reaction and library as thought???
 
-// reactionSchema SCHEMA HERE
+// Reaction Schema
 const reactionSchema = new Schema(
   {
       reactionId: {
@@ -27,28 +24,8 @@ const reactionSchema = new Schema(
     },
 );
 
-// reactionId
-// Use Mongoose's ObjectId data type
-// Default value is set to a new ObjectId
 
-// reactionBody
-// String
-// Required
-// 280 character maximum
-
-// username
-// String
-// Required
-
-// createdAt
-// Date
-// Set default value to the current timestamp
-// Use a getter method to format the timestamp on query
-
-
-// Schema Settings:
-// This will not be a model, but rather will be used as the reaction field's subdocument schema in the Thought model.
-
+// Thought Schema
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -84,22 +61,3 @@ const Thought = model('thought', thoughtSchema);
 const handleError = (err) => console.error(err);
 
 module.exports = Thought;
-
-// X thoughtText
-// String
-// Required
-// Must be between 1 and 280 characters
-
-// X createdAt
-// Date
-// Set default value to the current timestamp
-// Use a getter method to format the timestamp on query
-
-// getters?? username (The user that created this thought)
-// String
-// Required
-
-// reactions (These are like replies)
-// Array of nested documents created with the reactionSchema
-
-// Create a virtual called reactionCount that retrieves the length of the thought's reactions array field on query.

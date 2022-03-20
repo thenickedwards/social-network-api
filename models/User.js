@@ -1,11 +1,7 @@
 const { Schema, Types, model } = require('mongoose');
-// Use on 18.2.16?
-//  more 18.3.26, 18.3.24
-
-// import isEmail from 'validator/lib/isEmail';
-// import { isEmail } from 'validator';
 var validator = require('validator');
 
+// User Schema
 const userSchema = new Schema(
     {
         username: {
@@ -50,24 +46,3 @@ const User = model('user', userSchema);
 const handleError = (err) => console.error(err);
 
 module.exports = User;
-
-
-// username
-// String
-// Unique
-// Required
-// Trimmed
-
-// email
-// String
-// Required
-// Unique
-// Must match a valid email address (look into Mongoose's matching validation)
-
-// thoughts
-// Array of _id values referencing the Thought model
-
-// friends
-// Array of _id values referencing the User model (self-reference)
-
-// Create a virtual called friendCount that retrieves the length of the user's friends array field on query.
