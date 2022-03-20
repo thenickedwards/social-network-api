@@ -34,9 +34,13 @@ API Routes
         Xl. PUT to update a thought by its _id
         Xm. DELETE to remove a thought by its _id
     2b: /api/thoughts/:thoughtId/reactions
-        n: POST to create a reaction stored in a single thought's reactions array field
-        o: DELETE to pull and remove a reaction by the reaction's reactionId value
+        Xn: POST to create a reaction stored in a single thought's reactions array field
+        Xo: DELETE to pull and remove a reaction by the reaction's reactionId value
 
+## Cleanup
+    1. Fix date format
+    2. Delete comments, general cleanup
+## Demo Video
 
 ### Special Thanks
 https://github.com/validatorjs/validator.js

@@ -6,8 +6,6 @@ const { Schema, Types, model } = require('mongoose');
 // import { isEmail } from 'validator';
 var validator = require('validator');
 
-// FRIEND SCHEMA HERE
-
 const userSchema = new Schema(
     {
         username: {
@@ -28,7 +26,6 @@ const userSchema = new Schema(
                 ref: 'thought',
             }
         ],
-        // Is below right?
         friends: [
             {
                 type: Schema.Types.ObjectId,
