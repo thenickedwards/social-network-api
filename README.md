@@ -15,7 +15,7 @@ URL for GitHub repo: https://github.com/thenickedwards/social-network-api
 ## Demo Video
 Included is a video (embedded below) that demonstrates where to find the GitHub repository, how to start the application/server, and each route demonstarted to diplay functionality. There are also [mp4](/assets/social-network-api_demo-video.mp4) and [webm](/assets/social-network-api_demo-video.webm) video files in the assets folder or you can use this link to the video in my Google Drive: [https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view](https://drive.google.com/file/d/13hqibO4sHAMm-Y0uQgsao7TMU7YNBYtf/view)
 
-[![Demo Video]](https://youtu.be/COfcDtF0_X8)
+[![Demo Video](/assets/social-network-api_demo-still.png)](https://youtu.be/COfcDtF0_X8)
 
 Thank you for reading the readme!
 
