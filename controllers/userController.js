@@ -10,7 +10,10 @@ module.exports = {
         User.find()
         .select('-__v')
         .then((users) => res.json(users))
-        .catch((err) => res.status(500).json(err));
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+          });
     },
 // b. GET a single user by its _id and populated thought and friend data
     getSingleUser(req, res) {
@@ -49,7 +52,10 @@ module.exports = {
             ? res.status(404).json({ message: 'No user with this id!' })
             : res.json(course)
         )
-        .catch((err) => res.status(500).json(err));
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+          });
     },
 // e. DELETE to remove user by its _id
     deleteUser(req, res) {
@@ -60,7 +66,10 @@ module.exports = {
             : Student.deleteMany({ _id: { $in: user.thoughts } })
         )
         .then(() => res.json({ message: 'User and thoughts deleted!' }))
-        .catch((err) => res.status(500).json(err));
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+          });
     },
 // TODO: BONUS f: Remove a user's associated thoughts when deleted.
 
