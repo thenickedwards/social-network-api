@@ -8,6 +8,7 @@ All code for Social Network API written per acceptance criteria in [/assets/prov
 * When a user opens API GET routes in Insomnia for users and thoughts, the data for each of these routes is displayed in a formatted JSON
 * When a user tests API POST, PUT, and DELETE routes in Insomnia, they are able to successfully create, update, and delete users and thoughts in my database
 * When a user tests API POST and DELETE routes in Insomnia, they are able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
+* UPDATE! When originally submitted dates were not reformatted. The Thought model has been revised to format the createdAt date for the Thought model (Thought and Reaction schema). These will NOT appear in the demo video (it was recorded before the change) but are functional. Thank you!
 
 ## Links
 URL for GitHub repo: https://github.com/thenickedwards/social-network-api
