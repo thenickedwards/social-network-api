@@ -39,7 +39,7 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: timestamp => dayjs(timestamp).format('DD/MM/YYYY')
+      get: timestamp => dayjs(timestamp).format('MMM D, YYYY h:mm A')
     },
     username: {
       type: String,
