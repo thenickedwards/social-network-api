@@ -24,6 +24,13 @@ const reactionSchema = new Schema(
         get: timestamp => dayjs(timestamp).format('MMM D, YYYY h:mm A')
       },
     },
+    {
+      toJSON: {
+          virtuals: true,
+          getters: true
+      },
+      id: false,
+    }
 );
 
 
@@ -50,6 +57,7 @@ const thoughtSchema = new Schema(
   {
     toJSON: {
         virtuals: true,
+        getters: true
     },
     id: false,
   }
